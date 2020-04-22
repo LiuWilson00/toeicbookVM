@@ -1,0 +1,27 @@
+.word {
+    .word-font {
+        color: darkgreen;
+
+        .word-speech {
+            font-size: 1rem !important;
+            color: cadetblue
+        }
+    }
+
+    .word-extend {
+        color: #616161;
+    }
+
+    .word-sentence {
+        color: darkcyan !important;
+    }
+
+    .word-chinese {
+        color: cadetblue;
+    }
+
+    .v-card__actions.jusify-end {
+        justify-content: flex-end;
+
+    }
+}

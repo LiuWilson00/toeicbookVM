@@ -1,10 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <v-app>
+      <v-navigation-drawer app clipped>
+        <v-list>
+          <v-list-item v-for="i in 3" :key="i" :to="{path: '/ToeicBook/' + i}">
+            <v-list-item-action>
+              <v-icon>mdi-widgets</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Day {{ i }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+
+      <v-app-bar app clipped-left>
+        <v-toolbar-title>Toeic 30 day</v-toolbar-title>
+      </v-app-bar>
+      <v-content>
+        <v-container fluid>
+          <v-fade-transition mode="out-in">
+            <router-view></router-view>
+          </v-fade-transition>
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
@@ -13,20 +33,11 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
+
+<script>
+export default {};
+</script>
