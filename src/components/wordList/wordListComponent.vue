@@ -48,7 +48,6 @@ export default {
   created() {
     const vm = this;
     vm.$bus.$on("updateData", word => {
-      console.log(123);
       vm.updateWord(word);
     });
   },

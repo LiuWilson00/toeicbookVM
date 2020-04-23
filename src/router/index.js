@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import PrivacyPolicy from '../views/PrivacyPolicy.vue'
+import ToeicBook from '../views/ToeicBook.vue'
 
 Vue.use(VueRouter)
 
@@ -11,9 +13,14 @@ const routes = [
     component: Home
   },
   {
+    path: '/PrivacyPolicy',
+    name: 'Privacy Policy',
+    component: PrivacyPolicy
+  },
+  {
     path: '/ToeicBook/:day',
     name: 'ToeicBook',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ToeicBook.vue'),
+    component: ToeicBook,
     props: true
   }
 ]

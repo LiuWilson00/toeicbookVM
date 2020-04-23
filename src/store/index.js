@@ -7,6 +7,7 @@ import config from '../config'
 Vue.use(Vuex)
 
 async function getAllData() {
+  
   let List = []
   await axios.get(`${config.apiUrl}getWordList`).then(res => {
     List = res.data
